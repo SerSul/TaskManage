@@ -40,31 +40,35 @@ namespace {
 struct qt_meta_stringdata_CLASSAuthenticationModelENDCLASS_t {};
 static constexpr auto qt_meta_stringdata_CLASSAuthenticationModelENDCLASS = QtMocHelpers::stringData(
     "AuthenticationModel",
-    "authenticationResult",
+    "authenticationSuccess",
     "",
-    "success"
+    "token",
+    "authenticationFailed"
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSAuthenticationModelENDCLASS_t {
-    uint offsetsAndSizes[8];
+    uint offsetsAndSizes[10];
     char stringdata0[20];
-    char stringdata1[21];
+    char stringdata1[22];
     char stringdata2[1];
-    char stringdata3[8];
+    char stringdata3[6];
+    char stringdata4[21];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSAuthenticationModelENDCLASS_t::offsetsAndSizes) + ofs), len 
 Q_CONSTINIT static const qt_meta_stringdata_CLASSAuthenticationModelENDCLASS_t qt_meta_stringdata_CLASSAuthenticationModelENDCLASS = {
     {
         QT_MOC_LITERAL(0, 19),  // "AuthenticationModel"
-        QT_MOC_LITERAL(20, 20),  // "authenticationResult"
-        QT_MOC_LITERAL(41, 0),  // ""
-        QT_MOC_LITERAL(42, 7)   // "success"
+        QT_MOC_LITERAL(20, 21),  // "authenticationSuccess"
+        QT_MOC_LITERAL(42, 0),  // ""
+        QT_MOC_LITERAL(43, 5),  // "token"
+        QT_MOC_LITERAL(49, 20)   // "authenticationFailed"
     },
     "AuthenticationModel",
-    "authenticationResult",
+    "authenticationSuccess",
     "",
-    "success"
+    "token",
+    "authenticationFailed"
 };
 #undef QT_MOC_LITERAL
 #endif // !QT_MOC_HAS_STRING_DATA
@@ -76,18 +80,20 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSAuthenticationModelENDCLASS[] = 
       11,       // revision
        0,       // classname
        0,    0, // classinfo
-       1,   14, // methods
+       2,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       1,       // signalCount
+       2,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    1,   20,    2, 0x06,    1 /* Public */,
+       1,    1,   26,    2, 0x06,    1 /* Public */,
+       4,    0,   29,    2, 0x06,    3 /* Public */,
 
  // signals: parameters
-    QMetaType::Void, QMetaType::Bool,    3,
+    QMetaType::Void, QMetaType::QString,    3,
+    QMetaType::Void,
 
        0        // eod
 };
@@ -101,9 +107,11 @@ Q_CONSTINIT const QMetaObject AuthenticationModel::staticMetaObject = { {
     qt_incomplete_metaTypeArray<qt_meta_stringdata_CLASSAuthenticationModelENDCLASS_t,
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<AuthenticationModel, std::true_type>,
-        // method 'authenticationResult'
+        // method 'authenticationSuccess'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<bool, std::false_type>
+        QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
+        // method 'authenticationFailed'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
 } };
@@ -114,15 +122,23 @@ void AuthenticationModel::qt_static_metacall(QObject *_o, QMetaObject::Call _c, 
         auto *_t = static_cast<AuthenticationModel *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->authenticationResult((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
+        case 0: _t->authenticationSuccess((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 1: _t->authenticationFailed(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         {
-            using _t = void (AuthenticationModel::*)(bool );
-            if (_t _q_method = &AuthenticationModel::authenticationResult; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+            using _t = void (AuthenticationModel::*)(const QString & );
+            if (_t _q_method = &AuthenticationModel::authenticationSuccess; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
                 *result = 0;
+                return;
+            }
+        }
+        {
+            using _t = void (AuthenticationModel::*)();
+            if (_t _q_method = &AuthenticationModel::authenticationFailed; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+                *result = 1;
                 return;
             }
         }
@@ -148,21 +164,27 @@ int AuthenticationModel::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 1)
+        if (_id < 2)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
+        _id -= 2;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 1)
+        if (_id < 2)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 1;
+        _id -= 2;
     }
     return _id;
 }
 
 // SIGNAL 0
-void AuthenticationModel::authenticationResult(bool _t1)
+void AuthenticationModel::authenticationSuccess(const QString & _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
+}
+
+// SIGNAL 1
+void AuthenticationModel::authenticationFailed()
+{
+    QMetaObject::activate(this, &staticMetaObject, 1, nullptr);
 }
 QT_WARNING_POP

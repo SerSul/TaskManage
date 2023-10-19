@@ -10,7 +10,8 @@ public:
     AuthenticationModel(QObject* parent = nullptr);
     void authenticateUser(const QString& username, const QString& password);
 signals:
-    void authenticationResult(bool success);
+    void authenticationSuccess(const QString& token);
+    void authenticationFailed();
 private:
     QNetworkAccessManager* networkManager;
 };

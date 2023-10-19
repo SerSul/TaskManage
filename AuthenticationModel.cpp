@@ -25,14 +25,25 @@ void AuthenticationModel::authenticateUser(const QString& username, const QStrin
 
     connect(reply, &QNetworkReply::finished, this, [this, reply]() {
         QByteArray response;
+        QString token;
         if (reply->error() == QNetworkReply::NoError) {
             response = reply->readAll();
 
-            QString responseString = QString::fromUtf8(response); 
-            qDebug() << responseString;
+            QJsonDocument jsonResponse = QJsonDocument::fromJson(response);
+            if (!jsonResponse.isNull()) {
+                QJsonObject jsonObject = jsonResponse.object();
+
+                token = jsonObject["accessToken"].toString();
+            }
         }
+
         reply->deleteLater();
+
+        if (!token.isEmpty()) {
+            emit authenticationSuccess(token);
+        }
+        else {
+            emit authenticationFailed();
+        }
         });
-
-
 }

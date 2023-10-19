@@ -9,7 +9,8 @@ class AuthenticationPresenter : public QObject {
     Q_OBJECT
 public:
     AuthenticationPresenter(AuthenticationModel* model, TaskManage* view, QObject* parent = nullptr);
-
+    void handleAuthenticationSuccess(const QString& token);
+    void handleAuthenticationFailed();
 
 public slots:
     void handleAuthenticationAttempt(const QString& username, const QString& password);
