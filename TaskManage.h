@@ -15,6 +15,10 @@ private:
     QPushButton* loginButton;
     QLineEdit* usernameInput;
     QLineEdit* passwordInput;
+
+signals:
+    void loginButtonClicked(const QString& username, const QString& password);
+
 private slots:
     void handleLoginButtonClicked();
 private:

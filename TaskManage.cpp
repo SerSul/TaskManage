@@ -1,4 +1,5 @@
 #include "TaskManage.h"
+#include <QString>
 
 TaskManage::TaskManage(QWidget *parent)
     : QMainWindow(parent)
@@ -20,4 +21,5 @@ void TaskManage::handleLoginButtonClicked() {
     QString username = usernameInput->text();
     QString password = passwordInput->text();
 
+    emit loginButtonClicked(username, password);
 }

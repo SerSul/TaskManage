@@ -8,6 +8,7 @@
 
 #include "../../../AuthenticationPresenter.h"
 #include <QtNetwork/QSslError>
+#include <QtGui/qtextcursor.h>
 #include <QtCore/qmetatype.h>
 
 #if __has_include(<QtCore/qtmochelpers.h>)
@@ -42,17 +43,21 @@ static constexpr auto qt_meta_stringdata_CLASSAuthenticationPresenterENDCLASS = 
     "AuthenticationPresenter",
     "handleAuthenticationAttempt",
     "",
+    "username",
+    "password",
     "handleAuthenticationResult",
     "success"
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSAuthenticationPresenterENDCLASS_t {
-    uint offsetsAndSizes[10];
+    uint offsetsAndSizes[14];
     char stringdata0[24];
     char stringdata1[28];
     char stringdata2[1];
-    char stringdata3[27];
-    char stringdata4[8];
+    char stringdata3[9];
+    char stringdata4[9];
+    char stringdata5[27];
+    char stringdata6[8];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSAuthenticationPresenterENDCLASS_t::offsetsAndSizes) + ofs), len 
@@ -61,12 +66,16 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSAuthenticationPresenterENDCLASS
         QT_MOC_LITERAL(0, 23),  // "AuthenticationPresenter"
         QT_MOC_LITERAL(24, 27),  // "handleAuthenticationAttempt"
         QT_MOC_LITERAL(52, 0),  // ""
-        QT_MOC_LITERAL(53, 26),  // "handleAuthenticationResult"
-        QT_MOC_LITERAL(80, 7)   // "success"
+        QT_MOC_LITERAL(53, 8),  // "username"
+        QT_MOC_LITERAL(62, 8),  // "password"
+        QT_MOC_LITERAL(71, 26),  // "handleAuthenticationResult"
+        QT_MOC_LITERAL(98, 7)   // "success"
     },
     "AuthenticationPresenter",
     "handleAuthenticationAttempt",
     "",
+    "username",
+    "password",
     "handleAuthenticationResult",
     "success"
 };
@@ -88,12 +97,12 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSAuthenticationPresenterENDCLASS[
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   26,    2, 0x0a,    1 /* Public */,
-       3,    1,   27,    2, 0x0a,    2 /* Public */,
+       1,    2,   26,    2, 0x0a,    1 /* Public */,
+       5,    1,   31,    2, 0x0a,    4 /* Public */,
 
  // slots: parameters
-    QMetaType::Void,
-    QMetaType::Void, QMetaType::Bool,    4,
+    QMetaType::Void, QMetaType::QString, QMetaType::QString,    3,    4,
+    QMetaType::Void, QMetaType::Bool,    6,
 
        0        // eod
 };
@@ -109,6 +118,8 @@ Q_CONSTINIT const QMetaObject AuthenticationPresenter::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<AuthenticationPresenter, std::true_type>,
         // method 'handleAuthenticationAttempt'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
+        QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
         // method 'handleAuthenticationResult'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<bool, std::false_type>
@@ -122,7 +133,7 @@ void AuthenticationPresenter::qt_static_metacall(QObject *_o, QMetaObject::Call 
         auto *_t = static_cast<AuthenticationPresenter *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->handleAuthenticationAttempt(); break;
+        case 0: _t->handleAuthenticationAttempt((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;
         case 1: _t->handleAuthenticationResult((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
         default: ;
         }

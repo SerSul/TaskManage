@@ -12,7 +12,7 @@ public:
 
 
 public slots:
-    void handleAuthenticationAttempt();
+    void handleAuthenticationAttempt(const QString& username, const QString& password);
     void handleAuthenticationResult(bool success);
 private:
 

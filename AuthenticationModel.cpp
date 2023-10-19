@@ -2,35 +2,37 @@
 #include "authenticationmodel.h"
 #include <QNetworkRequest>
 #include <QNetworkReply>
-
+#include <qjsonobject.h>
+#include <qjsondocument.h>
 AuthenticationModel::AuthenticationModel(QObject* parent) : QObject(parent) {
 
     networkManager = new QNetworkAccessManager(this);
 }
 
 void AuthenticationModel::authenticateUser(const QString& username, const QString& password) {
-    QNetworkRequest request(QUrl("http://localhost:8080/api/auth/signin")); 
+    QNetworkRequest request(QUrl("http://localhost:8080/api/auth/signin"));
 
-    QByteArray requestData = "username=" + username.toUtf8() + "&password=" + password.toUtf8();
+    QJsonObject jsonObject;
+    jsonObject["username"] = username;
+    jsonObject["password"] = password;
 
-    request.setHeader(QNetworkRequest::ContentTypeHeader, "application/x-www-form-urlencoded");
+    QJsonDocument jsonDoc(jsonObject);
+    QByteArray requestData = jsonDoc.toJson();
+
+    request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
 
     QNetworkReply* reply = networkManager->post(request, requestData);
 
     connect(reply, &QNetworkReply::finished, this, [this, reply]() {
+        QByteArray response;
         if (reply->error() == QNetworkReply::NoError) {
-            QByteArray response = reply->readAll();
-            qDebug() << response;
+            response = reply->readAll();
 
-            emit authenticationResult(true); 
-
-            emit authenticationResult(false); 
+            QString responseString = QString::fromUtf8(response); 
+            qDebug() << responseString;
         }
-        else {
-
-            emit authenticationResult(false); 
-        }
-
         reply->deleteLater();
         });
+
+
 }
