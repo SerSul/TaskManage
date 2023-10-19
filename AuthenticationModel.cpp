@@ -40,10 +40,10 @@ void AuthenticationModel::authenticateUser(const QString& username, const QStrin
         reply->deleteLater();
 
         if (!token.isEmpty()) {
-            emit authenticationSuccess(token);
+            emit authenticationSuccess_(token);
         }
         else {
-            emit authenticationFailed();
+            emit authenticationFailed_();
         }
         });
 }

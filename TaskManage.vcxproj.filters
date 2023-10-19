@@ -32,9 +32,6 @@
     <QtUic Include="TaskManage.ui">
       <Filter>Form Files</Filter>
     </QtUic>
-    <QtMoc Include="TaskManage.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -46,8 +43,20 @@
     <ClCompile Include="AuthenticationModel.cpp">
       <Filter>Auth</Filter>
     </ClCompile>
-    <ClCompile Include="TaskManage.cpp">
+    <ClCompile Include="AuthenticationView.cpp">
       <Filter>Auth</Filter>
+    </ClCompile>
+    <ClCompile Include="TaskModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TaskView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TaskPresenter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MainController.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -57,5 +66,27 @@
     <QtMoc Include="AuthenticationModel.h">
       <Filter>Auth</Filter>
     </QtMoc>
+    <QtMoc Include="AuthenticationView.h">
+      <Filter>Auth</Filter>
+    </QtMoc>
+    <QtMoc Include="MainController.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="menu.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="TaskModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskPresenter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

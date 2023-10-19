@@ -3,13 +3,13 @@
 #include <QtWidgets/QMainWindow>
 #include "ui_TaskManage.h"
 
-class TaskManage : public QMainWindow
+class AuthenticationView : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    TaskManage(QWidget *parent = nullptr);
-    ~TaskManage();
+    AuthenticationView(QWidget *parent = nullptr);
+    ~AuthenticationView();
 
 private:
     QPushButton* loginButton;

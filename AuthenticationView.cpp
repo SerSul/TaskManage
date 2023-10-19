@@ -1,7 +1,7 @@
-#include "TaskManage.h"
+#include "AuthenticationView.h"
 #include <QString>
 
-TaskManage::TaskManage(QWidget *parent)
+AuthenticationView::AuthenticationView(QWidget *parent)
     : QMainWindow(parent)
 {
     ui.setupUi(this);
@@ -10,14 +10,14 @@ TaskManage::TaskManage(QWidget *parent)
     passwordInput = findChild<QLineEdit*>("passwordInput");
 
 
-    connect(loginButton, &QPushButton::clicked, this, &TaskManage::handleLoginButtonClicked);
+    connect(loginButton, &QPushButton::clicked, this, &AuthenticationView::handleLoginButtonClicked);
 }
 
-TaskManage::~TaskManage()
+AuthenticationView::~AuthenticationView()
 {}
 
 
-void TaskManage::handleLoginButtonClicked() {
+void AuthenticationView::handleLoginButtonClicked() {
     QString username = usernameInput->text();
     QString password = passwordInput->text();
 

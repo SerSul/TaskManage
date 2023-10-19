@@ -40,35 +40,35 @@ namespace {
 struct qt_meta_stringdata_CLASSAuthenticationModelENDCLASS_t {};
 static constexpr auto qt_meta_stringdata_CLASSAuthenticationModelENDCLASS = QtMocHelpers::stringData(
     "AuthenticationModel",
-    "authenticationSuccess",
+    "authenticationSuccess_",
     "",
     "token",
-    "authenticationFailed"
+    "authenticationFailed_"
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSAuthenticationModelENDCLASS_t {
     uint offsetsAndSizes[10];
     char stringdata0[20];
-    char stringdata1[22];
+    char stringdata1[23];
     char stringdata2[1];
     char stringdata3[6];
-    char stringdata4[21];
+    char stringdata4[22];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSAuthenticationModelENDCLASS_t::offsetsAndSizes) + ofs), len 
 Q_CONSTINIT static const qt_meta_stringdata_CLASSAuthenticationModelENDCLASS_t qt_meta_stringdata_CLASSAuthenticationModelENDCLASS = {
     {
         QT_MOC_LITERAL(0, 19),  // "AuthenticationModel"
-        QT_MOC_LITERAL(20, 21),  // "authenticationSuccess"
-        QT_MOC_LITERAL(42, 0),  // ""
-        QT_MOC_LITERAL(43, 5),  // "token"
-        QT_MOC_LITERAL(49, 20)   // "authenticationFailed"
+        QT_MOC_LITERAL(20, 22),  // "authenticationSuccess_"
+        QT_MOC_LITERAL(43, 0),  // ""
+        QT_MOC_LITERAL(44, 5),  // "token"
+        QT_MOC_LITERAL(50, 21)   // "authenticationFailed_"
     },
     "AuthenticationModel",
-    "authenticationSuccess",
+    "authenticationSuccess_",
     "",
     "token",
-    "authenticationFailed"
+    "authenticationFailed_"
 };
 #undef QT_MOC_LITERAL
 #endif // !QT_MOC_HAS_STRING_DATA
@@ -107,10 +107,10 @@ Q_CONSTINIT const QMetaObject AuthenticationModel::staticMetaObject = { {
     qt_incomplete_metaTypeArray<qt_meta_stringdata_CLASSAuthenticationModelENDCLASS_t,
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<AuthenticationModel, std::true_type>,
-        // method 'authenticationSuccess'
+        // method 'authenticationSuccess_'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
-        // method 'authenticationFailed'
+        // method 'authenticationFailed_'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -122,22 +122,22 @@ void AuthenticationModel::qt_static_metacall(QObject *_o, QMetaObject::Call _c, 
         auto *_t = static_cast<AuthenticationModel *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->authenticationSuccess((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
-        case 1: _t->authenticationFailed(); break;
+        case 0: _t->authenticationSuccess_((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 1: _t->authenticationFailed_(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         {
             using _t = void (AuthenticationModel::*)(const QString & );
-            if (_t _q_method = &AuthenticationModel::authenticationSuccess; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+            if (_t _q_method = &AuthenticationModel::authenticationSuccess_; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
                 *result = 0;
                 return;
             }
         }
         {
             using _t = void (AuthenticationModel::*)();
-            if (_t _q_method = &AuthenticationModel::authenticationFailed; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+            if (_t _q_method = &AuthenticationModel::authenticationFailed_; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
                 *result = 1;
                 return;
             }
@@ -176,14 +176,14 @@ int AuthenticationModel::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void AuthenticationModel::authenticationSuccess(const QString & _t1)
+void AuthenticationModel::authenticationSuccess_(const QString & _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
 }
 
 // SIGNAL 1
-void AuthenticationModel::authenticationFailed()
+void AuthenticationModel::authenticationFailed_()
 {
     QMetaObject::activate(this, &staticMetaObject, 1, nullptr);
 }

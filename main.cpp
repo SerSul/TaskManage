@@ -1,15 +1,18 @@
-#include "TaskManage.h"
+#include "AuthenticationView.h"
 #include <QtWidgets/QApplication>
-#include "AuthenticationModel.h"
-#include "AuthenticationPresenter.h"
+
 #include <iostream>
+#include "MainController.h"
+
 int main(int argc, char* argv[])
 {
     QApplication a(argc, argv);
-    TaskManage taskmanager;
-    AuthenticationModel authenticationmodel;
-    AuthenticationPresenter presenter(&authenticationmodel, &taskmanager);
-    const std::type_info& typeInfo = typeid(taskmanager);
-    taskmanager.show();
+
+    // Создайте экземпляр MainController
+    MainController mainController;
+
+    // Запустите приложение
+    mainController.startApplication();
+
     return a.exec();
 }
