@@ -6,21 +6,21 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1339</width>
-    <height>711</height>
+    <width>800</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QListView" name="TasksList">
+   <widget class="QTableView" name="tableView">
     <property name="geometry">
      <rect>
-      <x>80</x>
-      <y>50</y>
-      <width>256</width>
-      <height>192</height>
+      <x>470</x>
+      <y>40</y>
+      <width>281</width>
+      <height>461</height>
      </rect>
     </property>
    </widget>
@@ -30,7 +30,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1339</width>
+     <width>800</width>
      <height>22</height>
     </rect>
    </property>

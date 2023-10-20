@@ -25,9 +25,9 @@ class Ui_TaskManageClass
 {
 public:
     QWidget *centralWidget;
-    QLineEdit *usernameInput;
-    QLineEdit *passwordInput;
     QPushButton *LoginBTN;
+    QLineEdit *passwordInput;
+    QLineEdit *usernameInput;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -36,22 +36,22 @@ public:
     {
         if (TaskManageClass->objectName().isEmpty())
             TaskManageClass->setObjectName("TaskManageClass");
-        TaskManageClass->resize(1698, 626);
+        TaskManageClass->resize(726, 613);
         centralWidget = new QWidget(TaskManageClass);
         centralWidget->setObjectName("centralWidget");
-        usernameInput = new QLineEdit(centralWidget);
-        usernameInput->setObjectName("usernameInput");
-        usernameInput->setGeometry(QRect(540, 230, 113, 22));
-        passwordInput = new QLineEdit(centralWidget);
-        passwordInput->setObjectName("passwordInput");
-        passwordInput->setGeometry(QRect(540, 270, 113, 22));
         LoginBTN = new QPushButton(centralWidget);
         LoginBTN->setObjectName("LoginBTN");
-        LoginBTN->setGeometry(QRect(560, 310, 75, 24));
+        LoginBTN->setGeometry(QRect(260, 330, 75, 24));
+        passwordInput = new QLineEdit(centralWidget);
+        passwordInput->setObjectName("passwordInput");
+        passwordInput->setGeometry(QRect(250, 290, 113, 22));
+        usernameInput = new QLineEdit(centralWidget);
+        usernameInput->setObjectName("usernameInput");
+        usernameInput->setGeometry(QRect(250, 250, 113, 22));
         TaskManageClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(TaskManageClass);
         menuBar->setObjectName("menuBar");
-        menuBar->setGeometry(QRect(0, 0, 1698, 22));
+        menuBar->setGeometry(QRect(0, 0, 726, 22));
         TaskManageClass->setMenuBar(menuBar);
         mainToolBar = new QToolBar(TaskManageClass);
         mainToolBar->setObjectName("mainToolBar");
@@ -68,7 +68,7 @@ public:
     void retranslateUi(QMainWindow *TaskManageClass)
     {
         TaskManageClass->setWindowTitle(QCoreApplication::translate("TaskManageClass", "TaskManage", nullptr));
-        LoginBTN->setText(QCoreApplication::translate("TaskManageClass", "Login", nullptr));
+        LoginBTN->setText(QCoreApplication::translate("TaskManageClass", "PushButton", nullptr));
     } // retranslateUi
 
 };

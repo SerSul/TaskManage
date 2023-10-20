@@ -24,6 +24,9 @@
     <Filter Include="Auth">
       <UniqueIdentifier>{119f5884-6594-4616-a39e-d7230a9fe9ee}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Tasks">
+      <UniqueIdentifier>{231433e6-0a17-4e57-a92d-4b9759d51966}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="TaskManage.qrc">
@@ -46,17 +49,17 @@
     <ClCompile Include="AuthenticationView.cpp">
       <Filter>Auth</Filter>
     </ClCompile>
-    <ClCompile Include="TaskModel.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="TaskView.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="TaskPresenter.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="MainController.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TaskModel.cpp">
+      <Filter>Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="TaskPresenter.cpp">
+      <Filter>Tasks</Filter>
+    </ClCompile>
+    <ClCompile Include="TaskView.cpp">
+      <Filter>Tasks</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -72,21 +75,19 @@
     <QtMoc Include="MainController.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="TaskModel.h">
+      <Filter>Tasks</Filter>
+    </QtMoc>
+    <QtMoc Include="TaskPresenter.h">
+      <Filter>Tasks</Filter>
+    </QtMoc>
+    <QtMoc Include="TaskView.h">
+      <Filter>Tasks</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="menu.ui">
       <Filter>Form Files</Filter>
     </QtUic>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="TaskModel.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TaskView.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TaskPresenter.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

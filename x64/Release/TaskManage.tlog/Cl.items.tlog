@@ -11,3 +11,6 @@ C:\Users\Dima\source\repos\TaskManage\TaskManage\x64\Release\moc\moc_Authenticat
 C:\Users\Dima\source\repos\TaskManage\TaskManage\x64\Release\moc\moc_AuthenticationModel.cpp;C:\Users\Dima\source\repos\TaskManage\TaskManage\x64\Release\moc_AuthenticationModel.obj
 C:\Users\Dima\source\repos\TaskManage\TaskManage\x64\Release\moc\moc_AuthenticationPresenter.cpp;C:\Users\Dima\source\repos\TaskManage\TaskManage\x64\Release\moc_AuthenticationPresenter.obj
 C:\Users\Dima\source\repos\TaskManage\TaskManage\x64\Release\moc\moc_MainController.cpp;C:\Users\Dima\source\repos\TaskManage\TaskManage\x64\Release\moc_MainController.obj
+C:\Users\Dima\source\repos\TaskManage\TaskManage\x64\Release\moc\moc_TaskModel.cpp;C:\Users\Dima\source\repos\TaskManage\TaskManage\x64\Release\moc_TaskModel.obj
+C:\Users\Dima\source\repos\TaskManage\TaskManage\x64\Release\moc\moc_TaskPresenter.cpp;C:\Users\Dima\source\repos\TaskManage\TaskManage\x64\Release\moc_TaskPresenter.obj
+C:\Users\Dima\source\repos\TaskManage\TaskManage\x64\Release\moc\moc_TaskView.cpp;C:\Users\Dima\source\repos\TaskManage\TaskManage\x64\Release\moc_TaskView.obj

@@ -110,9 +110,9 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="MainController.h" />
-    <ClInclude Include="TaskModel.h" />
-    <ClInclude Include="TaskPresenter.h" />
-    <ClInclude Include="TaskView.h" />
+    <QtMoc Include="TaskModel.h" />
+    <QtMoc Include="TaskPresenter.h" />
+    <QtMoc Include="TaskView.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
